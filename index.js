@@ -3,6 +3,16 @@ const routes = require('./routes');
 const path = require('path'); // lee el file system
 const bodyParser = require('body-parser')
 
+// Crear la conexión de BD
+const db = require('./config/db');
+
+// importar modelo
+require('./models/Proyectos');
+
+db.sync()
+    .then(() => console.log('Conectado al Servidor'))
+    .catch(error => console.log(error));
+
 // Crear una app de express
 const app = express();
 

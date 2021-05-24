@@ -28,5 +28,8 @@ exports.nuevoProyecto = (req, res) => {
             nombrePagina: 'Nuevo Proyecto',
             errores
         })
+    } else {
+        // Sin errores - Insertar en la BD
+        
     }
 }
